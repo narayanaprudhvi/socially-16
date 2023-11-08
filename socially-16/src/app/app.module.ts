@@ -8,12 +8,18 @@ import { SignupComponent } from './components/signup/signup.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastModule } from 'primeng/toast';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { SideNavComponent } from './components/side-nav/side-nav.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    HeaderComponent,
+    FooterComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,

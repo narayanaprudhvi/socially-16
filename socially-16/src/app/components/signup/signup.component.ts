@@ -28,6 +28,7 @@ export class SignupComponent {
   }
   onSignupSubmit(){ 
     this.router.navigateByUrl('/login');
+    window.scrollTo(0,0);
   }
 
   scrollToTop(){

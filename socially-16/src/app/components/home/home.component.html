@@ -1,7 +1,12 @@
-<main class="d-md-flex justify-content-between" style="background: #f3f6fd">
+<app-header></app-header>
+<div class="d-md-flex">
+  <!-- <div class="side-nav-div col-md-3">
+    <app-side-nav></app-side-nav>
+  </div> -->
+  <main class="d-md-flex justify-content-between" style="background: #f3f6fd">
     <!-- style="background: rgb(216, 133, 163, 0.5);" -->
     <!-- app-container  -->
-    <div class="container d-md-flex align-items-start">
+    <div class="container-fluid d-md-flex align-items-start">
       <!-- <div class="col-md-3 br20 sticky-side-nav" style="box-shadow: 2px 4px 12px rgba(0,0,0,.08); background:white !important;"> -->
       <!-- <app-side-nav></app-side-nav> -->
       <!-- </div> -->
@@ -19,7 +24,7 @@
               {{ currentDateTime | date : "medium" }}
             </h6>
           </div>
-  
+
           <section class="feed_posts_main">
             <div class="post_main d-flex g24 col-md-8 d-flex ms-auto w-100">
               <div class="profile_picc">
@@ -43,7 +48,7 @@
                 Post
               </button>
             </div>
-  
+
             <ng-container *ngFor="let x of postsArray; let i = index">
               <section class="single_post mt-5 br8 p24">
                 <div class="d-flex g24">
@@ -57,24 +62,27 @@
                     <div class="d-flex g12">
                       <h1 class="fs16 fw600">{{ x.profileName }}</h1>
                       <span class="grey fs12">
-                         {{ x.profileNickName }} &nbsp; . &nbsp;
+                        {{ x.profileNickName }} &nbsp; . &nbsp;
                         <span> {{ x.profileTime }} mins </span>
                       </span>
                     </div>
                     <div class="post_message_content mt-2">
-                      <p class="fw400 fs14 lh22">{{ x.profilePostContent }}
-                        <button class="show-more-btn" (click)="toggleDisplay(i)">
-                          {{ displayFullText ? 'Show Less' : 'Show More' }}
+                      <p class="fw400 fs14 lh22">
+                        {{ x.profilePostContent }}
+                        <button
+                          class="show-more-btn"
+                          (click)="toggleDisplay(i)"
+                        >
+                          {{ displayFullText ? "Show Less" : "Show More" }}
                         </button>
-                      </p> 
-                     
+                      </p>
                     </div>
                     <div class="likes-partt mt-3">
                       <!-- Like Button -->
                       <!-- <button [class.active]="x.liked" (click)="toggleLike(x)">
                       <i class="fa fa-thumbs-up"></i> Like
                     </button> -->
-  
+
                       <span role="button">
                         <svg
                           *ngIf="!x.like"
@@ -104,7 +112,7 @@
                           />
                         </svg>
                       </span>
-  
+
                       <!-- Dislike Button -->
                       <!-- <button [class.active]="x.isDisliked" (click)="toggleDislike(x)">
                       <i class="fa fa-thumbs-down"></i> Dislike
@@ -139,7 +147,7 @@
                           />
                         </svg>
                       </span>
-  
+
                       <!-- Comment Button -->
                       <span role="button">
                         <svg
@@ -214,7 +222,7 @@
                           </div>
                         </div>
                       </div>
-  
+
                       <!-- <button [class.active]="x.isCommented" (click)="toggleComment(x)">
                       <i class="fa fa-comment"></i> Comment
                     </button> -->
@@ -280,4 +288,6 @@
       </div>
     </div>
   </main>
-  
+</div>
+
+<app-footer></app-footer>
