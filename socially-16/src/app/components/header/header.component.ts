@@ -21,4 +21,8 @@ export class HeaderComponent {
   onLogOut(){
     this.router.navigateByUrl('/login');
   }
+  toHome(){
+    this.router.navigateByUrl('/home');
+    window.scrollTo(0,0);
+  }
 }
