@@ -1,10 +1,10 @@
-<aside class="side-nav-main p16 br20">
+<aside class="side-nav-main p16 br20 conv-stickyyy">
     <div class="side-list-main">
       <ul>
         <li
           (click)="onClick(1)"
           [ngClass]="{ active: tab === 'tab1' }"
-          class="p16 pointer width-max"
+          class="p10 pointer width-max"
           [routerLink]="'/home'"
         >
           <svg
@@ -23,7 +23,8 @@
         <li
           (click)="onClick(2)"
           [ngClass]="{ active: tab === 'tab2' }"
-          class="p16 pointer width-max"
+          class="p10 pointer width-max"
+          [routerLink]="'/conversations'"
         >
           <svg
             width="20"
@@ -41,7 +42,7 @@
         <li
           (click)="onClick(3)"
           [ngClass]="{ active: tab === 'tab3' }"
-          class="p16 pointer width-max"
+          class="p10 pointer width-max" [routerLink]="'/profile'"
         >
           <svg
             width="20"
@@ -59,7 +60,7 @@
         <li
           (click)="onClick(6)"
           [ngClass]="{ active: tab === 'tab6' }"
-          class="p16 pointer width-max"
+          class="p10 pointer width-max"
         >
           <svg
             width="20"
@@ -82,7 +83,7 @@
         <li
           (click)="onClick(7)"
           [ngClass]="{ active: tab === 'tab7' }"
-          class="p16 pointer width-max"
+          class="p10 pointer width-max"
         >
           <svg
             width="20"
@@ -104,7 +105,7 @@
         <li
           (click)="onClick(4)"
           [ngClass]="{ active: tab === 'tab4' }"
-          class="p16 pointer width-max"
+          class="p10 pointer width-max"
         >
           <svg
             width="20"
@@ -125,7 +126,7 @@
         <li
           (click)="onClick(5)"
           [ngClass]="{ active: tab === 'tab5' }"
-          class="p16 pointer width-max"
+          class="p10 pointer width-max"
         >
           <svg
             width="20"

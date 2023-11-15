@@ -187,7 +187,7 @@ table {
 .fs56 {
   font-size: 56px !important;
 }
-.p-60{
+.p-60 {
   padding: 60px !important;
 }
 .black {
@@ -196,8 +196,11 @@ table {
 .pink {
   color: #d885a3 !important;
 }
-.width-max{
-  width : max-content !important;
+.width-max {
+  width: max-content !important;
+}
+.width-auto {
+  width: auto !important;
 }
 .login_margin {
   padding: 73px 0;
@@ -205,10 +208,10 @@ table {
 .back_white {
   background: white !important;
 }
-.white{
+.white {
   color: white !important;
 }
-.p10{
+.p10 {
   padding: 10px !important;
 }
 .back_pink {
@@ -485,6 +488,9 @@ input:read-only {
 .p8 {
   padding: 8px !important;
 }
+.p10 {
+  padding: 10px !important;
+}
 .p16 {
   padding: 16px !important;
 }
@@ -504,7 +510,7 @@ input:read-only {
   text-decoration: underline !important;
   text-decoration-color: #d885a3 !important;
 }
-.pink-border-btn{
+.pink-border-btn {
   border: 1px solid #d885a3;
   background: white;
   color: #d885a3;
@@ -727,7 +733,7 @@ input:read-only {
   padding: 20px;
   border-radius: 20px;
 }
-.lh20{
+.lh20 {
   line-height: 20px;
 }
 .loader {
@@ -782,14 +788,28 @@ input:read-only {
     box-shadow: none;
   }
 }
-.sticky-side-nav{
+.sticky-side-nav {
   position: sticky !important;
   top: 92px !important;
 }
-.show-more-btn{
+.show-more-btn {
   background: transparent !important;
   color: #d885a3;
   border: 0;
   outline: 0;
   text-decoration: underline;
+}
+.conv-sticky {
+  position: sticky !important;
+  top: 116px !important;
+  background: #ffffff !important;
+}
+.conv-stickyyy{
+  position: sticky !important;
+  top: 116px !important; 
+}
+// html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

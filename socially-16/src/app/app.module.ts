@@ -11,6 +11,13 @@ import { ToastModule } from 'primeng/toast';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
+import { ConversationsComponent } from './components/conversations/conversations.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ProfileComponent } from './components/profile/profile.component';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { CalendarModule } from 'primeng/calendar';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +26,9 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
     SigninComponent,
     HeaderComponent,
     FooterComponent,
-    SideNavComponent
+    SideNavComponent,
+    ConversationsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +36,12 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
     FormsModule,
     ReactiveFormsModule,
     ToastModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgSelectModule,
+    CalendarModule,
+    MatBadgeModule,
+    MatIconModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

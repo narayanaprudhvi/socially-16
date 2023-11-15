@@ -1,0 +1,97 @@
+<app-header></app-header>
+
+<main
+  class="d-md-flex justify-content-between container-fluid g24"
+  style="background: #f3f6fd"
+>
+<app-side-nav></app-side-nav>
+<!--Conversations code  -->
+<main class="messages_main col-md-10 br20 back_white">
+  <section class="py-3 br20">
+    <div class="container">
+      <div class="container py-4 conv-sticky">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="col-md-3 d-flex searchBar relative">
+                <input
+                  type="text"
+                  class="w-100"
+                  name="messageSearch"
+                  placeholder="Search by name"
+                  [(ngModel)]="messageSSearch"
+                  (keyup)="search()"
+                />
+                <svg width="30" height="30" fill="#d885a3" class="bi bi-x pointer absolute conv-search-cross" viewBox="0 0 16 16"  *ngIf="crossIconModel || messageSSearch" (click)="clearCross()">
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+               
+                <img
+                  class="absolute"
+                  src="../../../assets/Images/search.svg"
+                  alt="search"
+                />
+              </div>
+          <!-- <div
+            class="backTo_home d-flex align-items-center pointer"
+            [routerLink]="'/home'"
+          >
+            <img
+              class="pointer"
+              src="../../../assets/Images/arrow_back.svg"
+              alt="back"
+            />
+            <h1 class="ms-3 fw600 fs12 grey">Back to Home</h1>
+          </div> -->
+          <button type="button" class="pink_btn pointer">
+            New Conversation
+          </button>
+        </div>
+        
+      </div>
+
+      <section class="conv_cards_main mt-3">
+        <div class="back_white br8 p24 conv-card-one">
+          <div class="all_conversations">
+            <!--  *ngIf="(messages | filter: messageSSearch).length > 0; else noResults" -->
+            <!-- <ul *ngFor="let x of messages; let i = index"> -->
+            <!-- <ul *ngFor="let x of filteredItems ? filteredItems : messages; let i = index"> -->
+            <ul *ngFor="let x of messages; let i = index">
+              <!-- | filter : messageSSearch -->
+              <li
+                class="d-flex align-items-center pointer"
+                [ngClass]="{ active: i === activeIndex }"
+                (click)="activeIndex = i"
+              >
+                <div
+                  class="single_conversation d-flex align-items-center justify-content-between"
+                >
+                  <p
+                    class="fw500 fs14 conv-letter-pic"
+                    [ngStyle]="{
+                      'background-color': customColors[i % customColors.length]
+                    }"
+                  >
+                    {{ x.name | slice : 0 : 1 }}
+                  </p>
+                </div>
+                <div class="col-md-10 ms-3 single_conv_data p8">
+                  <h1 class="fw500 fs12">{{ x.name }}</h1>
+                  <p class="grey fw400 fs12 mt-3">{{ x.message }}</p>
+                </div>
+              </li>
+              <div class="border-bottom my-3"></div>
+            </ul>
+          </div>
+          <ng-template #noResults>
+            <p class="text-center fw500 fs14 blue-color mt-4">
+              No Records Found
+            </p>
+          </ng-template>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+</main>
+<!--Conversations code  -->
+
+<app-footer></app-footer>

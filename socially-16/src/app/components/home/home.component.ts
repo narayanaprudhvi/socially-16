@@ -94,4 +94,10 @@ export class HomeComponent {
    toggleDisplay(i:any){
     this.displayFullText = ! this.displayFullText;
    }
+   postPost(){
+    let obj = {
+      
+    }
+    // this.postsArray
+   }
 }
