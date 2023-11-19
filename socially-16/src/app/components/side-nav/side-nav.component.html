@@ -4,7 +4,7 @@
         <li
           (click)="onClick(1)"
           [ngClass]="{ active: tab === 'tab1' }"
-          class="p10 pointer width-max"
+          class="p10 pointer d-flex"
           [routerLink]="'/home'"
         >
           <svg
@@ -23,7 +23,7 @@
         <li
           (click)="onClick(2)"
           [ngClass]="{ active: tab === 'tab2' }"
-          class="p10 pointer width-max"
+          class="p10 pointer d-flex"
           [routerLink]="'/conversations'"
         >
           <svg
@@ -42,7 +42,7 @@
         <li
           (click)="onClick(3)"
           [ngClass]="{ active: tab === 'tab3' }"
-          class="p10 pointer width-max" [routerLink]="'/profile'"
+          class="p10 pointer d-flex" [routerLink]="'/profile'"
         >
           <svg
             width="20"
@@ -60,7 +60,7 @@
         <li
           (click)="onClick(6)"
           [ngClass]="{ active: tab === 'tab6' }"
-          class="p10 pointer width-max"
+          class="p10 pointer d-flex"
         >
           <svg
             width="20"
@@ -83,7 +83,7 @@
         <li
           (click)="onClick(7)"
           [ngClass]="{ active: tab === 'tab7' }"
-          class="p10 pointer width-max"
+          class="p10 pointer d-flex"
         >
           <svg
             width="20"
@@ -105,7 +105,7 @@
         <li
           (click)="onClick(4)"
           [ngClass]="{ active: tab === 'tab4' }"
-          class="p10 pointer width-max"
+          class="p10 pointer d-flex"
         >
           <svg
             width="20"
@@ -126,7 +126,7 @@
         <li
           (click)="onClick(5)"
           [ngClass]="{ active: tab === 'tab5' }"
-          class="p10 pointer width-max"
+          class="p10 pointer d-flex"
         >
           <svg
             width="20"
