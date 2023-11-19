@@ -160,11 +160,11 @@
 }
 .mat-badge-content.mat-badge-active{
     position: absolute;
-    top: -12px;
-    right: 6px;
+    top: -12px !important;
+    right: 6px !important;
     font-weight: 600;
     background: red;
-    padding: 4px;
+    padding:0.5px 4px;
     border-radius: 50%;
     color: white;
     font-size: 12px;
